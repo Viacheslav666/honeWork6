@@ -44,11 +44,12 @@ public class Main {
 
     public static void task5() {
         System.out.println("Задание 5");
-        for (int i = 1904; i < 2096; i = i + 4) {
-            System.out.println(i + "год является високосным");
+        for (int year = 1904; year <= 2096;year++) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                System.out.println(year + "год является високосным");
+            }
         }
     }
-
     public static void task6() {
         System.out.println("Задание 6");
         for (int i = 7; i < 98; i = i + 7) {
@@ -67,8 +68,8 @@ public class Main {
         System.out.println("Задание 8");
         int salary = 29_000;
         int total = 0;
-        for (int i = 0; i < 13; i++){
-            total = total + salary;
+        for (int i = 0; i <= 12; i++){
+            total +=salary;
             System.out.println("Месяц " + i + " , сумма накоплений равна " +  total + " рублей");
         }
     }
